@@ -47,25 +47,7 @@ This README file.
 
 AI was used as a productivity accelerator, but final logic, correctness, and structure were fully reviewed and refined manually.
 
-📂 Project Structure
-css
-Copy
-Edit
-src
-├── main
-│   ├── java
-│   │   └── org.example
-│   │       ├── controller
-│   │       ├── model
-│   │       ├── repository
-│   │       └── service
-│   └── resources
-│       └── jackpot_postman_collection_final.json
-└── test
-└── java
-└── org.example
-├── controller
-└── service
+
 🌐 API Endpoints
 💰 Jackpot APIs
 POST /jackpots/create — Create a new jackpot.
@@ -73,9 +55,7 @@ POST /jackpots/create — Create a new jackpot.
 GET /jackpots/all — List all jackpots.
 
 Example Jackpot JSON
-json
-Copy
-Edit
+
 {
 "jackpotId": "j1",
 "poolAmount": 1000.0,
@@ -86,21 +66,22 @@ Edit
 "rewardChance": 0.4,
 "poolLimit": 5000.0
 }
+
 🤑 Bet APIs
 POST /bets/publish — Publish a bet and contribute to jackpot pool.
 
 POST /bets/evaluate — Evaluate if a bet wins a reward.
 
 Example Bet JSON
-json
-Copy
-Edit
+
 {
 "betId": "b1",
 "userId": "u1",
 "jackpotId": "j1",
 "amount": 500.0
 }
+
+
 💡 Design Notes
 A separate JackpotController is included to allow creating and listing jackpots easily via API.
 
@@ -109,11 +90,7 @@ This was designed intentionally to populate initial data for testing and local s
 Enables smooth development and integration testing workflows.
 
 📬 Postman Collection
-A full Postman collection with all endpoints and example requests is included at:
-
-css
-Copy
-Edit
+A full Postman collection with all endpoints and example requests is included under the folder : 
 src/main/resources/jackpot_postman_collection_final.json
 Import this into Postman to test APIs quickly.
 
@@ -129,9 +106,7 @@ Validate full HTTP API flows using MockMvc.
 Located under src/test/java/org/example/controller.
 
 💡 Run tests
-bash
-Copy
-Edit
+
 mvn test
 Or in IntelliJ: right-click the test directory → Run All Tests.
 
@@ -142,9 +117,7 @@ Java 17+
 Maven
 
 ✅ Build & Start
-bash
-Copy
-Edit
+
 mvn clean install
 mvn spring-boot:run
 App runs at: http://localhost:8080
